@@ -1,0 +1,463 @@
+// Variable
+* {margin:0;padding:0}
+button:focus { outline: 0}
+
+//Weight
+$regular: 400;
+$light: 300;
+$semibold: 600;
+
+//Color
+$green-color: #3aa322;
+$blue-color: #4ec4ce;
+$black-text-color: #000000;
+$white-text-color: #fff;
+$green_color_2: #96c873;
+$gray_color: #f6fafb;
+
+//Size
+$f12: 12px;
+$f14: 14px;
+$f16: 16px;
+$f20: 20px;
+$f24: 24px;
+$f32: 32px;
+$f36: 36px;
+$f48: 48px;
+$trans: 0.4s ease;
+//font
+@mixin font($size,$weight){
+    font-family: 'Open Sans',sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin gradient-border($color1, $color2, $border-width, $direction) {
+    border: none;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#{$direction}, $color1 100%, $color2 100%), linear-gradient(#{$direction}, $color1 1000%, $color2 100%);
+    @if $direction == 'to right' or $direction == 'to left' {
+      @if $direction == 'to right' {
+        border-left: $border-width solid $color1;
+        border-right: $border-width solid $color2;
+      } @else {
+        border-left: $border-width solid $color2;
+        border-right: $border-width solid $color1;
+      }
+      background-position: 0 0, 0 100%;
+      background-size: 100% $border-width;
+    }
+    
+    @if $direction == 'to top' or $direction == 'to bottom' {
+      @if $direction == 'to top' {
+        border-top: $border-width solid $color2;
+        border-bottom: $border-width solid $color1;
+      } @else {
+        border-top: $border-width solid $color1;
+        border-bottom: $border-width solid $color2;
+      }
+      background-position: 0 0, 100% 0;
+      background-size: $border-width 0%;
+    }
+  }
+
+  @mixin linear-gradient($from, $to) {
+    background: $to;
+      background: -moz-linear-gradient(top, $from 0%, $to 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+      background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+      background: -o-linear-gradient(top, $from 0%,$to 100%);
+      background: linear-gradient(to bottom, $from 0%,$to 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+  }
+%h1 {
+    @include font($f32,$light);
+    padding: 60px 0 40px 0;
+}
+%h3 {
+    @include font($f24,$light);
+    padding-bottom: 50px;
+    margin-top: -30px;
+}   
+//BEGIN
+#Navigation {
+    background: #fff;
+    .navbar {
+        padding-top:0;
+        padding-bottom:0;
+        a.logo {
+            padding-top:15px;
+            padding-bottom: 20px;
+        }
+        ul.link {
+            padding-top: 16px;
+            a {
+                color: $black-text-color;
+                @include font($f14,$regular);
+                padding: 0 10px;
+                transition: $trans;
+                &:hover {color: $green-color}
+            }
+            li.try {
+                a {
+                    button {
+                        @include font($f14,$regular);
+                        background: transparent;
+                        color: $black-text-color;
+                        border-radius: 50px;
+                        padding: 7px 20px;
+                        position: relative;
+                        transition: $trans;
+                        transform: translateY(-10px);
+                        @include gradient-border($green-color,$blue-color ,2px,'to bottom');
+                        &:hover {
+                            @include linear-gradient($green-color,$blue-color);
+                            color: white;
+                        }
+
+                    }
+                }
+
+            }
+        }
+    } //End navbar
+} // End Navigation
+
+button.reg {
+    @include linear-gradient($green-color_2,$green_color);
+    @include font($f14,$light);
+    border-radius: 50px;
+    padding: 8px 22px;
+}
+#banner {
+    background-image: url(../images/banner_02.png);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    display: flex;
+    align-items: center;
+    box-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    .cover {
+        width:100%;
+        height: 100%;
+        background: black;
+        opacity: 0.7;
+        position: absolute;
+    }
+    .inner {
+        h1 {
+            @include font($f24,$light);
+        }
+        p {
+            @include font($f16,$light);
+        }
+        
+        .angle-down {
+            transform: translateY(10vh);
+            i {
+                font-size: $f48;
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+} //End banner
+
+#intro {
+    background-image: url(../images/bg-2_12.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -5px 17px 0px #00000033;
+    h1 {
+        @extend %h1;
+    }
+    .inner {
+       ._1block{
+           margin-bottom: 40px;
+            .question-img { float: left}
+            .reason {
+                padding-left: 75px;
+                @include font($f14,$regular);
+                p.title {
+                    color: $green-color;
+                    font-weight: $semibold;
+                }
+            }
+            button.reg {
+                margin-left: 75px;
+            }
+       }
+    }
+} // End Intro
+
+#solve {
+    background: $gray_color;
+    width: 100%;
+    height: 100%;
+    h1 {
+        @extend %h1;
+    }
+    ._1block{
+        margin-bottom: 40px;
+            .tick-img { 
+                float: left;
+                img {width: 42px; height: 42px;}
+            }
+            .solve {
+                padding-left: 60px;
+                @include font($f14,$regular);
+                p.title {
+                    color: $black-text-color;
+                    font-weight: $semibold;
+                }
+            }
+            button.reg {
+                margin-left: 75px;
+            }
+    }
+}
+
+#solve2 {
+    background-image: url('../images/bg-4_02.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    ._1block{
+        margin-bottom: 40px;
+            .tick-img { 
+                float: left;
+                img {width: 42px; height: 42px;}
+            }
+            .solve {
+                padding-left: 60px;
+                @include font($f14,$regular);
+                p.title {
+                    color: $black-text-color;
+                    font-weight: $semibold;
+                }
+            }
+            button.reg {
+                margin-top: 40px;
+            }
+    }
+} // End solve
+
+//bpos
+#bpos {
+    background: $green-color-2;
+    color: $white-text-color;
+    padding-bottom: 60px;
+    h1 {
+        @extend %h1;
+    }
+    h3 {
+        @extend %h3;
+    }
+    .inner {
+        p.title {
+            @include font($f16,$semibold);
+            padding-top: 20px;
+        }
+        p.text {
+            @include font($f14,$regular)
+        }
+    }
+    button.reg {
+        background: $white-text-color;
+        color: $black-text-color;
+        border:none;
+        @include font($f14,$regular);
+    }
+} // End bpos
+
+#other {
+    padding-bottom: 60px;
+    h1 { @extend %h1;}
+    h3 { @extend %h3;}
+    .inner {
+        ._1line {
+            @include font($f14,$regular);
+            margin-bottom: 30px;
+            img {float:left}
+            p {padding-left: 50px;}
+        }
+    }
+}
+
+#feedback{
+    background-image: url(../images/bg-feedback.png);
+    background-size: cover;
+    padding-bottom: 60px;
+    h1 { @extend %h1;}
+    .slider {
+        ._1fb {
+            @include font($f16,$light);
+            p.name {
+                @include font($f16,$semibold)
+            }
+        }
+        .owl-dots {
+            text-align: left;
+            .owl-dot {
+                span {
+                    background: $green-color;
+                }
+            }
+            .owl-dot.active {
+                span {
+                    background: $green_color_2;
+                }
+            }
+        }
+    }
+}
+
+#register {
+    padding: 40px 0;
+    img {
+        float: left;
+        width: 120px;
+        height: 120px;
+    }
+    h1 {
+        @include font($f32,$light);
+    }
+    form {
+        display: inline-block;
+        padding-top: 30px;
+        input[type=text] {
+            width: 500px;
+            border-radius: 50px;
+            background: $gray_color;
+            border-style: solid;
+            border: none;
+            padding: 10px 22px;
+            margin-right: 10px;
+        }
+        input[type='text']{
+            @include font($f14,$light);
+        }
+        p#notify {
+            @include font($f14,$semibold);
+            color: red;
+            text-align: left;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        button.reg {
+            padding: 8px 32px;
+        }
+    }
+}
+
+#footer {
+    background: $black-text-color;
+    padding: 40px 0;
+    color: $gray_color;
+    @include font($f14,$light);
+    img { width: 30%;}
+    .location {
+        padding-top: 20px;
+        @include font($f14,$semibold);
+        a {
+            color: $gray_color;
+            text-decoration: none;;
+        }
+    }
+    h5 {
+        @include font($f14,$semibold);
+        padding-bottom: 20px;
+    }
+    .list-link {
+        ul {
+            li {
+                list-style: none;
+                margin-bottom: 10px;
+                a {
+                    color: $gray_color;
+                    text-decoration: none;
+                    transition: $trans;
+                    &:hover {
+                        color: $green-color;
+                    }
+                }
+            }
+        }
+    } //End list-link
+    ul.list-social {
+        li {
+            list-style:none;
+            margin-right: 5px;
+            width: 30px;
+            height:30px;
+            background: $gray_color;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transition: $trans;
+            &:hover {
+                background: $green-color;
+                a {
+                    color: $white-text-color;
+                }
+            }
+            a {
+                color: $black-text-color;
+                transition: $trans;
+                i {
+                    padding-left:10px;
+                    padding-top: 7px;
+                }
+            }
+        }
+    }
+} // End footer
+
+// CSS for Javascript
+@-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -20%, 0);
+      transform: translate3d(0, -20%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+@keyframes fadeInDown {
+from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+}
+
+to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+}
+
+.fadeInDown {
+-webkit-animation-name: fadeInDown;
+animation-name: fadeInDown;
+}
+
+#Navigation.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width:100%;
+    box-shadow: -1px 7px 15px 0 #0000002b; 
+}
+
+    
