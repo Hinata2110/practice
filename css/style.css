@@ -4,172 +4,210 @@
 /* line 3, style.scss */
 button:focus { outline: 0; }
 
-/* line 72, style.scss */
+/* line 71, style.scss */
 #intro h1, #solve h1, #bpos h1, #other h1, #feedback h1 { font-family: 'Open Sans',sans-serif; font-size: 32px; font-weight: 300; padding: 60px 0 40px 0; }
 
-/* line 76, style.scss */
+/* line 75, style.scss */
 #bpos h3, #other h3 { font-family: 'Open Sans',sans-serif; font-size: 24px; font-weight: 300; padding-bottom: 50px; margin-top: -30px; }
 
-/* line 82, style.scss */
+/* line 81, style.scss */
 #Navigation { background: #fff; }
-/* line 84, style.scss */
+/* line 83, style.scss */
 #Navigation .navbar { padding-top: 0; padding-bottom: 0; }
-/* line 87, style.scss */
+/* line 86, style.scss */
 #Navigation .navbar a.logo { padding-top: 15px; padding-bottom: 20px; }
-/* line 91, style.scss */
+/* line 90, style.scss */
 #Navigation .navbar ul.link { padding-top: 16px; }
-/* line 93, style.scss */
-#Navigation .navbar ul.link a { color: #000000; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; padding: 0 10px; -webkit-transition: 0.4s ease; transition: 0.4s ease; }
+/* line 92, style.scss */
+#Navigation .navbar ul.link li._1 { padding-left: 20px; }
+/* line 95, style.scss */
+#Navigation .navbar ul.link li._2 { margin-left: 80px; }
 /* line 98, style.scss */
+#Navigation .navbar ul.link a { color: #000000; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; padding: 0 10px; -webkit-transition: 0.4s ease; transition: 0.4s ease; }
+/* line 103, style.scss */
 #Navigation .navbar ul.link a:hover { color: #3aa322; }
-/* line 102, style.scss */
-#Navigation .navbar ul.link li.try a button { font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; background: transparent; color: #000000; border-radius: 50px; padding: 7px 20px; position: relative; -webkit-transition: 0.4s ease; transition: 0.4s ease; -webkit-transform: translateY(-10px); transform: translateY(-10px); border: none; background-repeat: no-repeat; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #3aa322), to(#4ec4ce)), -webkit-gradient(linear, left top, left bottom, color-stop(1000%, #3aa322), to(#4ec4ce)); background-image: linear-gradient(to bottom, #3aa322 100%, #4ec4ce 100%), linear-gradient(to bottom, #3aa322 1000%, #4ec4ce 100%); border-top: 2px solid #3aa322; border-bottom: 2px solid #4ec4ce; background-position: 0 0, 100% 0; background-size: 2px 0%; }
-/* line 112, style.scss */
+/* line 107, style.scss */
+#Navigation .navbar ul.link li.try a button { font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; background: transparent; color: #000000; border-radius: 50px; padding: 7px 20px; position: relative; -webkit-transition: 0.4s ease; transition: 0.4s ease; -webkit-transform: translateY(-10px); transform: translateY(-10px); background-repeat: no-repeat; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #3aa322), to(#4ec4ce)), -webkit-gradient(linear, left top, left bottom, color-stop(1000%, #3aa322), to(#4ec4ce)); background-image: linear-gradient(to bottom, #3aa322 100%, #4ec4ce 100%), linear-gradient(to bottom, #3aa322 1000%, #4ec4ce 100%); border-top: 2px solid #3aa322; border-bottom: 2px solid #4ec4ce; background-position: 0 0, 100% 0; background-size: 2px 0%; }
+/* line 117, style.scss */
 #Navigation .navbar ul.link li.try a button:hover { background: #4ec4ce; background: -webkit-gradient(linear, left top, left bottom, from(#3aa322), to(#4ec4ce)); background: linear-gradient(to bottom, #3aa322 0%, #4ec4ce 100%); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#3aa322, endColorstr=#4ec4ce); color: white; }
 
-/* line 125, style.scss */
+/* line 130, style.scss */
 button.reg { background: #3aa322; background: -webkit-gradient(linear, left top, left bottom, from(#96c873), to(#3aa322)); background: linear-gradient(to bottom, #96c873 0%, #3aa322 100%); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#96c873, endColorstr=#3aa322); font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 300; border-radius: 50px; padding: 8px 22px; }
 
-/* line 131, style.scss */
+/* line 136, style.scss */
 #banner { background-image: url(../images/banner_02.png); background-size: cover; background-position: center; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; box-align: center; color: #fff; position: relative; overflow: hidden; }
-/* line 142, style.scss */
+/* line 147, style.scss */
 #banner .cover { width: 100%; height: 100%; background: black; opacity: 0.7; position: absolute; }
-/* line 150, style.scss */
+/* line 155, style.scss */
 #banner .inner h1 { font-family: 'Open Sans',sans-serif; font-size: 24px; font-weight: 300; }
-/* line 153, style.scss */
+/* line 158, style.scss */
 #banner .inner p { font-family: 'Open Sans',sans-serif; font-size: 16px; font-weight: 300; }
-/* line 157, style.scss */
+/* line 162, style.scss */
 #banner .inner .angle-down { -webkit-transform: translateY(10vh); transform: translateY(10vh); }
-/* line 159, style.scss */
+/* line 164, style.scss */
 #banner .inner .angle-down i { font-size: 48px; cursor: pointer; opacity: 0.7; }
 
-/* line 168, style.scss */
+/* line 173, style.scss */
 #intro { background-image: url(../images/bg-2_12.png); background-position: center; background-size: cover; width: 100%; height: 100%; -webkit-box-shadow: inset 0px -5px 17px 0px #00000033; box-shadow: inset 0px -5px 17px 0px #00000033; }
-/* line 179, style.scss */
+/* line 184, style.scss */
 #intro .inner ._1block { margin-bottom: 40px; }
-/* line 181, style.scss */
+/* line 186, style.scss */
 #intro .inner ._1block .question-img { float: left; }
-/* line 182, style.scss */
+/* line 187, style.scss */
 #intro .inner ._1block .reason { padding-left: 75px; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; }
-/* line 185, style.scss */
-#intro .inner ._1block .reason p.title { color: #3aa322; font-weight: 600; }
 /* line 190, style.scss */
+#intro .inner ._1block .reason p.title { color: #3aa322; font-weight: 600; }
+/* line 195, style.scss */
 #intro .inner ._1block button.reg { margin-left: 75px; }
 
-/* line 197, style.scss */
+/* line 202, style.scss */
 #solve { background: #f6fafb; width: 100%; height: 100%; }
-/* line 204, style.scss */
+/* line 209, style.scss */
 #solve ._1block { margin-bottom: 40px; }
-/* line 206, style.scss */
+/* line 211, style.scss */
 #solve ._1block .tick-img { float: left; }
-/* line 208, style.scss */
-#solve ._1block .tick-img img { width: 42px; height: 42px; }
-/* line 210, style.scss */
-#solve ._1block .solve { padding-left: 60px; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; }
 /* line 213, style.scss */
-#solve ._1block .solve p.title { color: #000000; font-weight: 600; }
+#solve ._1block .tick-img img { width: 42px; height: 42px; }
+/* line 215, style.scss */
+#solve ._1block .solve { padding-left: 60px; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; }
 /* line 218, style.scss */
+#solve ._1block .solve p.title { color: #000000; font-weight: 600; }
+/* line 223, style.scss */
 #solve ._1block button.reg { margin-left: 75px; }
 
-/* line 224, style.scss */
+/* line 229, style.scss */
 #solve2 { background-image: url("../images/bg-4_02.png"); background-size: cover; background-position: center; width: 100%; height: 100%; padding: 40px 0; }
-/* line 231, style.scss */
+/* line 236, style.scss */
 #solve2 ._1block { margin-bottom: 40px; }
-/* line 233, style.scss */
+/* line 238, style.scss */
 #solve2 ._1block .tick-img { float: left; }
-/* line 235, style.scss */
-#solve2 ._1block .tick-img img { width: 42px; height: 42px; }
-/* line 237, style.scss */
-#solve2 ._1block .solve { padding-left: 60px; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; }
 /* line 240, style.scss */
-#solve2 ._1block .solve p.title { color: #000000; font-weight: 600; }
+#solve2 ._1block .tick-img img { width: 42px; height: 42px; }
+/* line 242, style.scss */
+#solve2 ._1block .solve { padding-left: 60px; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; }
 /* line 245, style.scss */
+#solve2 ._1block .solve p.title { color: #000000; font-weight: 600; }
+/* line 250, style.scss */
 #solve2 ._1block button.reg { margin-top: 40px; }
 
-/* line 252, style.scss */
+/* line 257, style.scss */
 #bpos { background: #96c873; color: #fff; padding-bottom: 60px; }
-/* line 263, style.scss */
+/* line 268, style.scss */
 #bpos .inner p.title { font-family: 'Open Sans',sans-serif; font-size: 16px; font-weight: 600; padding-top: 20px; }
-/* line 267, style.scss */
+/* line 272, style.scss */
 #bpos .inner p.text { font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; }
-/* line 271, style.scss */
+/* line 276, style.scss */
 #bpos button.reg { background: #fff; color: #000000; border: none; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; }
 
-/* line 279, style.scss */
-#other { padding-bottom: 60px; }
 /* line 284, style.scss */
+#other { padding-bottom: 60px; }
+/* line 289, style.scss */
 #other .inner ._1line { font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; margin-bottom: 30px; }
-/* line 287, style.scss */
+/* line 292, style.scss */
 #other .inner ._1line img { float: left; }
-/* line 288, style.scss */
+/* line 293, style.scss */
 #other .inner ._1line p { padding-left: 50px; }
 
-/* line 293, style.scss */
+/* line 298, style.scss */
 #feedback { background-image: url(../images/bg-feedback.png); background-size: cover; padding-bottom: 60px; }
-/* line 299, style.scss */
+/* line 304, style.scss */
 #feedback .slider ._1fb { font-family: 'Open Sans',sans-serif; font-size: 16px; font-weight: 300; }
-/* line 301, style.scss */
+/* line 306, style.scss */
 #feedback .slider ._1fb p.name { font-family: 'Open Sans',sans-serif; font-size: 16px; font-weight: 600; }
-/* line 305, style.scss */
+/* line 310, style.scss */
 #feedback .slider .owl-dots { text-align: left; }
-/* line 308, style.scss */
-#feedback .slider .owl-dots .owl-dot span { background: #3aa322; }
 /* line 313, style.scss */
+#feedback .slider .owl-dots .owl-dot span { background: #3aa322; }
+/* line 318, style.scss */
 #feedback .slider .owl-dots .owl-dot.active span { background: #96c873; }
 
-/* line 321, style.scss */
+/* line 326, style.scss */
 #register { padding: 40px 0; }
-/* line 323, style.scss */
-#register img { float: left; width: 120px; height: 120px; }
 /* line 328, style.scss */
+#register img { float: left; width: 120px; height: 120px; }
+/* line 333, style.scss */
 #register h1 { font-family: 'Open Sans',sans-serif; font-size: 32px; font-weight: 300; }
-/* line 331, style.scss */
+/* line 336, style.scss */
 #register form { display: inline-block; padding-top: 30px; }
-/* line 334, style.scss */
+/* line 339, style.scss */
 #register form input[type=text] { width: 500px; border-radius: 50px; background: #f6fafb; border-style: solid; border: none; padding: 10px 22px; margin-right: 10px; }
-/* line 343, style.scss */
+/* line 348, style.scss */
 #register form input[type='text'] { font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 300; }
-/* line 346, style.scss */
+/* line 351, style.scss */
 #register form p#notify { font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 600; color: red; text-align: left; padding-left: 20px; padding-top: 10px; }
-/* line 353, style.scss */
+/* line 358, style.scss */
 #register form button.reg { padding: 8px 32px; }
 
-/* line 359, style.scss */
-#footer { background: #000000; padding: 40px 0; color: #f6fafb; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 300; }
 /* line 364, style.scss */
+#footer { background: #000000; padding: 40px 0; color: #f6fafb; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 300; }
+/* line 369, style.scss */
 #footer img { width: 30%; }
-/* line 365, style.scss */
+/* line 370, style.scss */
 #footer .location { padding-top: 20px; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 600; }
-/* line 368, style.scss */
-#footer .location a { color: #f6fafb; text-decoration: none; }
 /* line 373, style.scss */
+#footer .location a { color: #f6fafb; text-decoration: none; }
+/* line 378, style.scss */
 #footer h5 { font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 600; padding-bottom: 20px; }
-/* line 379, style.scss */
+/* line 384, style.scss */
 #footer .list-link ul li { list-style: none; margin-bottom: 10px; }
-/* line 382, style.scss */
+/* line 387, style.scss */
 #footer .list-link ul li a { color: #f6fafb; text-decoration: none; -webkit-transition: 0.4s ease; transition: 0.4s ease; }
-/* line 386, style.scss */
+/* line 391, style.scss */
 #footer .list-link ul li a:hover { color: #3aa322; }
-/* line 394, style.scss */
+/* line 399, style.scss */
 #footer ul.list-social li { list-style: none; margin-right: 5px; width: 30px; height: 30px; background: #f6fafb; border-radius: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.4s ease; transition: 0.4s ease; }
-/* line 403, style.scss */
+/* line 408, style.scss */
 #footer ul.list-social li:hover { background: #3aa322; }
-/* line 405, style.scss */
+/* line 410, style.scss */
 #footer ul.list-social li:hover a { color: #fff; }
-/* line 409, style.scss */
+/* line 414, style.scss */
 #footer ul.list-social li a { color: #000000; -webkit-transition: 0.4s ease; transition: 0.4s ease; }
-/* line 412, style.scss */
+/* line 417, style.scss */
 #footer ul.list-social li a i { padding-left: 10px; padding-top: 7px; }
 
 @-webkit-keyframes fadeInDown { from { opacity: 0; -webkit-transform: translate3d(0, -20%, 0); transform: translate3d(0, -20%, 0); }
   to { opacity: 1; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } }
 @keyframes fadeInDown { from { opacity: 0; -webkit-transform: translate3d(0, -20%, 0); transform: translate3d(0, -20%, 0); }
   to { opacity: 1; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } }
-/* line 450, style.scss */
+/* line 455, style.scss */
 .fadeInDown { -webkit-animation-name: fadeInDown; animation-name: fadeInDown; }
 
-/* line 455, style.scss */
+/* line 460, style.scss */
 #Navigation.fixed { position: fixed; top: 0; z-index: 999; width: 100%; -webkit-box-shadow: -1px 7px 15px 0 #0000002b; box-shadow: -1px 7px 15px 0 #0000002b; }
-5, style.scss */
-#Navigation.fixed { position: fixed; top: 0; z-index: 999; width: 100%; -webkit-box-shadow: -1px 7px 15px 0 #0000002b; box-shadow: -1px 7px 15px 0 #0000002b; }
+
+/* line 1, _mobile.scss */
+* { margin: 0; padding: 0; }
+
+/* line 2, _mobile.scss */
+button:focus { outline: 0; }
+
+@media (max-width: 576px) { /* line 35, _mobile.scss */
+  #Navigation { text-align: center; }
+  /* line 37, _mobile.scss */
+  #Navigation .navbar-light .navbar-toggler { border: none; }
+  /* line 41, _mobile.scss */
+  #Navigation ul.link li._1 { padding-left: 0 !important; }
+  /* line 44, _mobile.scss */
+  #Navigation ul.link li._2 { margin-left: 0 !important; }
+  /* line 47, _mobile.scss */
+  #Navigation ul.link li { margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #3aa322; }
+  /* line 51, _mobile.scss */
+  #Navigation ul.link li a { font-family: 'Open Sans',sans-serif; font-size: 16px; font-weight: 400; }
+  /* line 55, _mobile.scss */
+  #Navigation ul.link li:hover { background: #3aa322; }
+  /* line 57, _mobile.scss */
+  #Navigation ul.link li:hover a { color: #fff !important; }
+  /* line 62, _mobile.scss */
+  #Navigation ul.link li.try { border-bottom: none; }
+  /* line 64, _mobile.scss */
+  #Navigation ul.link li.try:hover { background: transparent; }
+  /* line 68, _mobile.scss */
+  #Navigation ul.link li.try a button { width: 100%; -webkit-transform: translateX(-10px) translateY(0px) !important; transform: translateX(-10px) translateY(0px) !important; }
+  /* line 78, _mobile.scss */
+  #register form { display: block; }
+  /* line 80, _mobile.scss */
+  #register form input[type=text] { width: 100%; }
+  /* line 83, _mobile.scss */
+  #register form button.reg { padding: 8px 32px; width: 100%; margin-top: 10px; } }
+
 /*# sourceMappingURL=style.css.map */
