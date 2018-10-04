@@ -33,6 +33,7 @@ $trans: 0.4s ease;
 
 @media (max-width:576px){
    .sideBar-Block{
+       display: block;
        #sideBar {
         .sideBar-inner {
             height:100%;
