@@ -78,50 +78,122 @@ $trans: 0.4s ease;
     margin-top: -30px;
 }   
 //BEGIN
+#sideBar {
+    width:280px;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    background: $green-color;
+    transform: translateX(-100%);
+    transition: $trans;
+    
+}
+
+#web-wrapper {
+    transition: $trans;
 #Navigation {
     background: #fff;
-    .navbar {
+    transition: $trans;
+    height: 80px;
+    line-height: 80px;
+    position: fixed;
+    width:100%;
+    z-index:9999;
+    .row {
         padding-top:0;
         padding-bottom:0;
-        a.logo {
-            padding-top:15px;
-            padding-bottom: 20px;
+        .logo-area {
+            span {
+                display: none;
+                cursor: pointer;
+                font-size: $f24;
+            }
+            a.logo {
+                padding-top:15px;
+                padding-bottom: 20px;
+                img {
+                    width: 60%;
+                }
+            }
         }
-        ul.link {
-            padding-top: 16px;
-            li._1 {
-                padding-left: 20px;
-            }
-            li._2 {
-                margin-left:80px;
-            }
-            a {
-                color: $black-text-color;
-                @include font($f14,$regular);
-                padding: 0 10px;
+        .main-nav {
+            padding-left:0;
+        }
+        ul {
+            li {
+                list-style: none;
+                position: relative;
                 transition: $trans;
-                &:hover {color: $green-color}
-            }
-            li.try {
-                a {
-                    button {
-                        @include font($f14,$regular);
-                        background: transparent;
-                        color: $black-text-color;
-                        border-radius: 50px;
-                        padding: 7px 20px;
-                        position: relative;
-                        transition: $trans;
-                        transform: translateY(-10px);
-                        @include gradient-border($green-color,$blue-color ,2px,'to bottom');
+                padding: 0 10px;
+                .megaMenu {
+                    display:none;
+                    transition: $trans;
+                    width: 250px;
+                    border-radius: 2px;
+                    height: auto;
+                    position: absolute;
+                    top:70px;
+                    left: -10px;
+                    background: #000000a3;
+                    padding: {
+                        top: 20px;
+                        left: 20px;
+                        right: 20px;
+                        bottom: 0;
+                    }
+                    a {
+                        display: block;
+                        margin-top: -30px;
+                        margin-bottom: -10px;
+                        @include font($f12,$regular);
+                        color: $white-text-color;
                         &:hover {
-                            @include linear-gradient($green-color,$blue-color);
-                            color: white;
+                            transform: translateX(10px);
                         }
-
                     }
                 }
-
+                a {
+                    @include font($f14,$regular);
+                    text-transform: uppercase;
+                    color: $black-text-color;
+                    text-decoration: none;
+                    transition: $trans;
+                    &:hover {
+                        color: $green-color;
+                    }
+                
+                }
+                &:hover {
+                    .megaMenu {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .trial {
+            padding-left: 0;
+            ul {
+                li {
+                    a {
+                        text-transform: none;
+                    }
+                }
+                li.try {
+                    a {
+                        button {
+                            @include font($f14,$regular);
+                            background: transparent;
+                            color: $black-text-color;
+                            @include gradient-border($green-color,$blue-color,2px,'to bottom' );
+                            border-radius: 50px;
+                            box-sizing: border-box;
+                            padding: 7px 26px;
+                            transform: translateY(-3px);
+                        }
+                    }
+                }
             }
         }
     } //End navbar
@@ -134,6 +206,7 @@ button.reg {
     padding: 8px 22px;
 }
 #banner {
+    height: 90vh;
     background-image: url(../images/banner_02.png);
     background-size: cover;
     background-position: center;
@@ -422,6 +495,8 @@ button.reg {
         }
     }
 } // End footer
+}
+
 
 // CSS for Javascript
 @-webkit-keyframes fadeInDown {
@@ -455,6 +530,18 @@ to {
 .fadeInDown {
 -webkit-animation-name: fadeInDown;
 animation-name: fadeInDown;
+}
+#sideBar.show {
+    transform: translateX(0%);
+}
+
+#web-wrapper {
+    .overlay.xh {
+        display: block;
+    }
+}
+#web-wrapper.move-right {
+    transform: translateX(280px);
 }
 
 #Navigation.fixed {

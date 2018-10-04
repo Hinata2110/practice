@@ -32,58 +32,121 @@ $trans: 0.4s ease;
 }
 
 @media (max-width:576px){
-    #Navigation {
-        text-align: center;
-        .navbar-light .navbar-toggler {
-            border:none;
-        }
-        ul.link {
-            li._1 {
-                padding-left:0!important;
-            }
-            li._2 {
-                margin-left:0!important;
-            }
-            li {
-                margin-bottom: 10px;
-                padding-bottom: 5px;
-                border-bottom: 1px solid $green-color;
-                a {
-                    @include font($f16,$regular);
-
-                }
-                &:hover {
-                    background: $green-color;
+   #sideBar {
+        .sideBar-inner {
+           height:100vh;
+            ul {
+                height:100vh;
+                padding: 30px;
+                li {
+                    list-style:none;
+                    width: 100%;
+                    margin-top: 25px;
+                    &:nth-child(1){
+                        margin-top: 0;
+                    }
+                    &:nth-child(2){
+                        margin-top: 30px;
+                    }
                     a {
-                        color: $white-text-color!important;
+                        color: $white-text-color;
+                        text-transform: uppercase;
+                        @include font($f16,$regular);
+                        text-decoration: none;
+                    }
+                    i {
+                        float: right;
+                        color: $green-color;
+                        font-size: $f24;
+                        background: $white-text-color;
+                        width: 25px;
+                        height:25px;
+                        padding-left:4px;
+                        border-radius: 2px;
+                    }
+                    .megaMenu {
+                        // display:none;
+                        width: 100%;
+                        border-radius: 2px;
+                        height: auto;
+                        background: #000000a3;
+                        padding: 10px;
+                        margin-top: 10px;
+                        a {
+                            display: block;
+                            @include font($f12,$regular);
+                            color: $white-text-color;
+                            margin-top: 20px;
+                            transition: $trans;
+                            &:nth-child(1){
+                                margin-top: 0;
+                            }
+                            &:hover {
+                                transform: translateX(10px);
+                                color: $green-color;
+                            }
+                        }
+                    }
+                }
+                li.logo1 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+   }
+
+    #web-wrapper {
+        .overlay {
+            width:100%;
+            height: 100%;
+            background: #000000a3;
+            position: fixed;
+            z-index: 1;
+            right:0;
+            top:0; 
+            display: none;
+        }
+        #Navigation {
+            .logo-area {
+                span { display: block!important;float:left;}
+                a.logo {
+                    img {
+                        margin-left: 15px;
                     }
                 }
             }
-            li.try {
-                border-bottom: none;
-                &:hover {
-                    background: transparent;
-                }
-                a {
-                    button {
-                        width:100%;
-                        transform: translateX(-10px) translateY(0px)!important;
+            .main-nav {display: none!important;}
+            .trial {
+                li.help {display:none;}
+                li.login {display:none;}
+                li.try {
+                    width: 100%;
+                    a {
+                        button {
+                            transform: translateY(0)!important;
+                            width:100%;
+                        }
                     }
                 }
             }
         }
-    }
-
-    #register {
-        form {
-            display: block;
-            input[type=text]{
-                width:100%;
-            }
-            button.reg {
-                padding: 8px 32px;
-                width:100%;
-                margin-top: 10px;
+        
+        #banner {
+            height: 60vh;
+        }
+            
+    
+        #register {
+            form {
+                display: block;
+                input[type=text]{
+                    width:100%;
+                }
+                button.reg {
+                    padding: 8px 32px;
+                    width:100%;
+                    margin-top: 10px;
+                }
             }
         }
     }
