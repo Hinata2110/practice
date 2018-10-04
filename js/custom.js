@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded',function(){
         status2 = '1st';
         submit = document.getElementById('submit-button');
         letters = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
-        barsButton = document.getElementById('bars-button');
-        slideLeft = document.getElementById('slideBar');
-        webContent = document.getElementById('web-wrapper');
+        more = document.getElementsByClassName('more');
+        back = document.getElementsByClassName('back');
         
         
 
@@ -51,8 +50,27 @@ document.addEventListener('DOMContentLoaded',function(){
             return false;
         }
     }
+    //SideBar-content
+    for (let i = 0; i < more.length; i++) {
+        more[i].addEventListener('click',function(){
+            var content = this.getAttribute('data-moveLeft');
+            var showContent = document.getElementById(content);
+            
+            showContent.classList.add('move-left');
+        })
+        
+    }
+    for (let i = 0; i < back.length; i++) {
+        back[i].addEventListener('click',function(){
 
-    
+            var content = more[i].getAttribute('data-moveLeft');
+            var showContent = document.getElementById(content);
+            
+            showContent.classList.remove('move-left');
+        })
+            
+            
+    }
 },false);
 
 //Jquery
@@ -89,12 +107,8 @@ $(document).ready(function () {
         e.preventDefault();
         $('#sideBar').removeClass('show');
         $('#web-wrapper').removeClass('move-right');
+        $('.sideBar-hidden').removeClass('move-left');
         $(this).removeClass('xh');
         $('html,body').css('overflow','visible');
-    })
-
-    $('#sideBar .megaMenu').slideUp();
-    $('#sideBar li i').click(function(e){
-        $(this).next().slideToggle(400,'easeInQuad');
     })
 });

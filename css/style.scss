@@ -78,19 +78,31 @@ $trans: 0.4s ease;
     margin-top: -30px;
 }   
 //BEGIN
-#sideBar {
+.sideBar-Block {
     width:280px;
-    height: 100%;
+    height:100%;
     overflow: hidden;
     position: fixed;
-    z-index: 2;
-    left: 0;
-    background: $green-color;
-    transform: translateX(-100%);
-    transition: $trans;
-    
+    #sideBar {
+        width:280px;
+        height: 100%;
+        overflow: hidden;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        background: $green-color;
+        transform: translateX(-100%);
+        transition: $trans;
+        
+    }
+    .sideBar-hidden {
+        @extend #sideBar ;
+        transform: translateX(100%);
+        z-index:3;
+        opacity:0;
+        visibility: hidden;
+    }
 }
-
 #web-wrapper {
     transition: $trans;
 #Navigation {
@@ -534,7 +546,11 @@ animation-name: fadeInDown;
 #sideBar.show {
     transform: translateX(0%);
 }
-
+.sideBar-hidden.move-left {
+    transform: translateX(0);
+    opacity:1;
+    visibility: visible;
+}
 #web-wrapper {
     .overlay.xh {
         display: block;

@@ -32,67 +32,81 @@ $trans: 0.4s ease;
 }
 
 @media (max-width:576px){
-   #sideBar {
+   .sideBar-Block{
+       #sideBar {
         .sideBar-inner {
-           height:100%;
-            ul {
-                height:100vh;
-                padding: 30px;
-                li {
-                    list-style:none;
-                    width: 100%;
-                    margin-top: 25px;
-                    &:nth-child(1){
-                        margin-top: 0;
-                    }
-                    &:nth-child(2){
-                        margin-top: 30px;
-                    }
-                    a {
-                        color: $white-text-color;
-                        text-transform: uppercase;
-                        @include font($f16,$regular);
-                        text-decoration: none;
-                    }
-                    i {
-                        float: right;
-                        color: $green-color;
-                        font-size: $f24;
-                        background: $white-text-color;
-                        width: 25px;
-                        height:25px;
-                        padding-left:4px;
-                        border-radius: 2px;
-                    }
-                    .megaMenu {
-                        // display:none;
+            height:100%;
+            .sideBar-opened {
+                ul {
+                    height:100vh;
+                    padding: 30px;
+                    li {
+                        list-style:none;
                         width: 100%;
-                        border-radius: 2px;
-                        height: auto;
-                        background: #000000a3;
-                        padding: 10px;
-                        margin-top: 10px;
+                        margin-top: 25px;
+                        &:nth-child(1){
+                            margin-top: 0;
+                        }
+                        &:nth-child(2){
+                            margin-top: 30px;
+                        }
                         a {
-                            display: block;
-                            @include font($f12,$regular);
                             color: $white-text-color;
-                            margin-top: 20px;
-                            transition: $trans;
-                            &:nth-child(1){
-                                margin-top: 0;
-                            }
-                            &:hover {
-                                transform: translateX(10px);
-                                color: $green-color;
-                            }
+                            text-transform: uppercase;
+                            @include font($f16,$regular);
+                            text-decoration: none;
+                        }
+                        i {
+                            float: right;
+                            color: $green-color;
+                            font-size: $f24;
+                            background: $white-text-color;
+                            width: 25px;
+                            height:25px;
+                            padding-left:10px;
+                            border-radius: 2px;
                         }
                     }
+                    li.logo1 {
+                        margin-bottom: 20px;
+                    }
                 }
-                li.logo1 {
-                    margin-bottom: 20px;
+            } // End sideBar-opened
+        }
+    }
+    .sideBar-hidden {
+        .content {
+            height:100%;
+            padding:30px;
+            color: $white-text-color;
+            h4 {
+                @include font($f32,$regular);
+                padding-top: 20px;
+                text-align:center;
+                span {
+                    float:left;
+                    font-size: $f32;
+                }
+            }
+            .megaMenu {
+                a {
+                    display: block;
+                    transition: $trans;
+                    color: $white-text-color;
+                    text-transform: uppercase;
+                    @include font($f16,$regular);
+                    text-decoration: none;
+                    margin-top: 25px;
+                    border-bottom: 1px solid $white-text-color;
+                    padding-bottom: 10px;
+                    &:hover {
+                        color: $green-color-2;
+                        transform: translateX(10px);
+                    }
                 }
             }
         }
+    }
    }
 
     #web-wrapper {
