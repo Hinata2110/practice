@@ -74,7 +74,7 @@ $(document).ready(function () {
     })
 
     //SideBar
-    $('#bars-button').on('click',function(e){
+    $('#bars-button').click(function(e){
         e.preventDefault();
         $('#sideBar').toggleClass('show');
         $('#web-wrapper').toggleClass('move-right');
@@ -85,7 +85,7 @@ $(document).ready(function () {
         $('html,body').css('overflow','visible');
     })
 
-    $('.overlay').on('click',function(e){
+    $('.overlay').click(function(e){
         e.preventDefault();
         $('#sideBar').removeClass('show');
         $('#web-wrapper').removeClass('move-right');
@@ -95,6 +95,6 @@ $(document).ready(function () {
 
     $('#sideBar .megaMenu').slideUp();
     $('#sideBar li i').click(function(e){
-        $(this).next().slideToggle(400,'easeInQua');
+        $(this).next().slideToggle(400,'easeInQuad');
     })
 });
