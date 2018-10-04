@@ -11,7 +11,7 @@ button:focus { outline: 0; }
 #web-wrapper #bpos h3, #web-wrapper #other h3 { font-family: 'Open Sans',sans-serif; font-size: 24px; font-weight: 300; padding-bottom: 50px; margin-top: -30px; }
 
 /* line 81, style.scss */
-#sideBar { width: 280px; height: 100vh; overflow: hidden; position: fixed; z-index: 2; left: 0; background: #3aa322; -webkit-transform: translateX(-100%); transform: translateX(-100%); -webkit-transition: 0.4s ease; transition: 0.4s ease; }
+#sideBar { width: 280px; height: 100%; overflow: hidden; position: fixed; z-index: 2; left: 0; background: #3aa322; -webkit-transform: translateX(-100%); transform: translateX(-100%); -webkit-transition: 0.4s ease; transition: 0.4s ease; }
 
 /* line 94, style.scss */
 #web-wrapper { -webkit-transition: 0.4s ease; transition: 0.4s ease; }
@@ -198,7 +198,7 @@ button:focus { outline: 0; }
 button:focus { outline: 0; }
 
 @media (max-width: 576px) { /* line 36, _mobile.scss */
-  #sideBar .sideBar-inner { height: 100vh; }
+  #sideBar .sideBar-inner { height: 100%; }
   /* line 38, _mobile.scss */
   #sideBar .sideBar-inner ul { height: 100vh; padding: 30px; }
   /* line 41, _mobile.scss */
