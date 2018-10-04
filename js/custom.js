@@ -80,9 +80,9 @@ $(document).ready(function () {
         $('#web-wrapper').toggleClass('move-right');
         $('.overlay').toggleClass('xh');
         if ($('#sideBar').hasClass('show'))
-        $('html').css('overflow','hidden');
+        $('html,body').css('overflow','hidden');
         else 
-        $('html').css('overflow','visible');
+        $('html,body').css('overflow','visible');
     })
 
     $('.overlay').on('click',function(e){
@@ -90,11 +90,11 @@ $(document).ready(function () {
         $('#sideBar').removeClass('show');
         $('#web-wrapper').removeClass('move-right');
         $(this).removeClass('xh');
-        $('html').css('overflow','visible');
+        $('html,body').css('overflow','visible');
     })
 
     $('#sideBar .megaMenu').slideUp();
     $('#sideBar li i').click(function(e){
-        $(this).next().slideToggle(400,'easeInQuad');
+        $(this).next().slideToggle(400,'easeInQua');
     })
 });
